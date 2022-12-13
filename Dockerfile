@@ -9,9 +9,9 @@ COPY deploy-container/settings.json .local/share/code-server/User/settings.json
 # Use bash shell
 ENV SHELL=/bin/bash
 
-FROM python:3.8
-
-RUN pip install --no-cache-dir --upgrade pip \ && pip install --no-cache-dir -r requirements.txt
+RUN apt-get update && apt-get install -y \
+    python3.8 &&\
+    python3-pip &&\
   
 # Install unzip + rclone (support for remote filesystem)
 RUN sudo apt-get update && sudo apt-get install unzip -y
