@@ -41,6 +41,11 @@ RUN sudo apt-get update -y
 
 RUN sudo apt-get install -y python3
 RUN sudo apt install -y python3-pip
+
+RUN code-server --install-extension esbenp.prettier-vscode
+RUN code-server --install-extension ms-python.python
+RUN code-server --install-extension knisterpeter.vscode-github
+
 # Port
 ENV PORT=8080
 
