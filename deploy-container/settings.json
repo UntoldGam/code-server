@@ -1,7 +1,13 @@
 {
   "workbench.colorTheme": "Default Dark+",
   "git.postCommitCommand": "sync",
+  "git.useEditorAsCommitInput": false,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "editor.formatOnType": false,
+  "editor.codeLens": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "python.defaultInterpreterPath": "python"
 }
