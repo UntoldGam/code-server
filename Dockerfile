@@ -43,11 +43,10 @@ RUN sudo apt install -y python3-pip
 RUN sudo code-server --install-extension esbenp.prettier-vscode
 RUN sudo code-server --install-extension ms-python.python
 RUN sudo code-server --install-extension knisterpeter.vscode-github
+RUN sudo code-server --install-extension dbaeumer.vscode-eslint
 
 RUN sudo git config --global user.name "Code Server"
 RUN sudo git config --global user.email charlesobird+github@outlook.com
-
-RUN git pull https://github.com/UntoldGam/Text-Based-Adventure-Game.git
 
 # Port
 ENV PORT=8080
