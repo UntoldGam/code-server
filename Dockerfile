@@ -54,7 +54,7 @@ RUN git init
 RUN cd "/home/coder/project"
 RUN git remote add origin "https://github.com/UntoldGam/Text-Based-Adventure-Game.git"
 RUN git remote -v
-RUN git pull origin/main
+RUN git pull origin
 
 # Port
 ENV PORT=8080
