@@ -14,8 +14,6 @@ ENV SHELL=/bin/bash
 RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
-
-
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
 
@@ -46,7 +44,6 @@ RUN sudo code-server --install-extension esbenp.prettier-vscode
 RUN sudo code-server --install-extension ms-python.python
 RUN sudo code-server --install-extension knisterpeter.vscode-github
 
-RUN sudo git config --global init.defaultBranch main
 RUN sudo git config --global user.name "Code Server"
 RUN sudo git config --global user.email charlesobird+github@outlook.com
 
