@@ -46,6 +46,10 @@ RUN sudo code-server --install-extension esbenp.prettier-vscode
 RUN sudo code-server --install-extension ms-python.python
 RUN sudo code-server --install-extension knisterpeter.vscode-github
 
+RUN sudo git config --global init.defaultBranch main
+RUN sudo git config --global user.name "Code Server"
+RUN sudo git config --global user.email charlesobird+github@outlook.com
+
 # Port
 ENV PORT=8080
 

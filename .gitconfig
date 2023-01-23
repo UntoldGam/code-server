@@ -1,0 +1,6 @@
+[user]
+	name = Code Server
+	email = charlesobird+github@outlook.com
+	username = code-server
+[init]
+	defaultBranch = main
