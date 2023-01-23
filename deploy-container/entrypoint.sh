@@ -3,12 +3,12 @@
 START_DIR="${START_DIR:-/home/coder/project}"
 
 PREFIX="deploy-code-server"
-
+GIT_REPO="https://github.com/UntoldGam/Text-Based-Adventure-Game.git"
 mkdir -p $START_DIR
 
 # function to clone the git repo or add a user's first file if no repo was specified.
 project_init () {
-    [ -z "${GIT_REPO}" ] && echo "[$PREFIX] No GIT_REPO specified" && echo "Example file. Have questions? Join us at https://community.coder.com" > $START_DIR/coder.txt || git remote add origin $GIT_REPO $START_DIR && git pull origin/main
+    [ -z $GIT_REPO ] && echo "[$PREFIX] No GIT_REPO specified" && echo "Example file. Have questions? Join us at https://community.coder.com" > $START_DIR/coder.txt || git remote add origin $GIT_REPO $START_DIR && git pull origin/main
 }
 
 # add rclone config and start rclone, if supplied
