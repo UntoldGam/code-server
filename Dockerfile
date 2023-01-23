@@ -45,8 +45,10 @@ RUN sudo code-server --install-extension ms-python.python
 RUN sudo code-server --install-extension knisterpeter.vscode-github
 RUN sudo code-server --install-extension dbaeumer.vscode-eslint
 
-RUN sudo git config --global user.name "Code Server"
-RUN sudo git config --global user.email charlesobird+github@outlook.com
+RUN git init
+
+RUN git config --global user.name "Code Server"
+RUN git config --global user.email charlesobird+github@outlook.com
 
 # Port
 ENV PORT=8080
