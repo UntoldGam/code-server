@@ -46,7 +46,7 @@ RUN sudo code-server --install-extension knisterpeter.vscode-github
 RUN sudo code-server --install-extension dbaeumer.vscode-eslint
 
 RUN git init
-
+RUN git pull "https://github.com/UntoldGam/Text-Based-Adventure-Game.git"
 RUN git config --global user.name "Code Server"
 RUN git config --global user.email charlesobird+github@outlook.com
 
