@@ -55,7 +55,3 @@ ENV PORT=8080
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
-
-RUN cd project
-RUN git init
-RUN git pull "https://github.com/UntoldGam/Text-Based-Adventure-Game.git"
