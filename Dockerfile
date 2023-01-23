@@ -45,9 +45,7 @@ RUN sudo code-server --install-extension ms-python.python
 RUN sudo code-server --install-extension knisterpeter.vscode-github
 RUN sudo code-server --install-extension dbaeumer.vscode-eslint
 
-RUN sudo cd project
-RUN git init
-RUN git pull "https://github.com/UntoldGam/Text-Based-Adventure-Game.git"
+
 RUN git config --global user.name "Code Server"
 RUN git config --global user.email charlesobird+github@outlook.com
 
@@ -57,3 +55,7 @@ ENV PORT=8080
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
+
+RUN sudo cd project
+RUN git init
+RUN git pull "https://github.com/UntoldGam/Text-Based-Adventure-Game.git"
