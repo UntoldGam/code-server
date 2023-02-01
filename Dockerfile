@@ -40,13 +40,14 @@ RUN sudo code-server --install-extension ms-python.python
 RUN sudo code-server --install-extension knisterpeter.vscode-github
 RUN sudo code-server --install-extension dbaeumer.vscode-eslint
 
-RUN mkdir -p "/home/coder/project"
+
 
 RUN git config --global user.name "Code Server"
 RUN git config --global user.email charlesobird+github@outlook.com
+RUN mkdir -p "/home/coder/project"
+RUN cd "/home/coder/project"
 
 RUN git init
-RUN cd "/home/coder/project"
 RUN git remote add origin "https://github.com/UntoldGam/Text-Based-Adventure-Game.git"
 RUN git remote -v
 RUN git pull origin main
