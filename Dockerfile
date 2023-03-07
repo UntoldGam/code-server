@@ -40,7 +40,7 @@ RUN sudo code-server --install-extension ms-python.python
 RUN sudo code-server --install-extension knisterpeter.vscode-github
 RUN sudo code-server --install-extension dbaeumer.vscode-eslint
 
-
+# login to git + change dir
 
 RUN git config --global user.name "Code Server"
 RUN git config --global user.email charlesobird+github@outlook.com
