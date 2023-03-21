@@ -35,10 +35,10 @@ RUN sudo apt-get update -y
 RUN sudo apt-get install -y python3
 RUN sudo apt install -y python3-pip
 
-RUN sudo code-server --install-extension esbenp.prettier-vscode
-RUN sudo code-server --install-extension ms-python.python
-RUN sudo code-server --install-extension knisterpeter.vscode-github
-RUN sudo code-server --install-extension dbaeumer.vscode-eslint
+RUN sudo code-server --global --install-extension esbenp.prettier-vscode
+RUN sudo code-server --global --install-extension ms-python.python
+RUN sudo code-server --global --install-extension knisterpeter.vscode-github
+RUN sudo code-server --global --install-extension dbaeumer.vscode-eslint
 
 # login to git + change dir
 
