@@ -32,6 +32,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 RUN sudo apt-get update -y
 
+RUN sudo apt-get install systemctl
 RUN sudo apt-get install -y python3
 RUN sudo apt install -y python3-pip
 
