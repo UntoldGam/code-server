@@ -44,13 +44,6 @@ RUN sudo code-server --install-extension dbaeumer.vscode-eslint
 
 RUN git config --global user.name "Code Server"
 RUN git config --global user.email charlesobird+github@outlook.com
-RUN mkdir -p "/home/coder/adventure-game"
-RUN cd "/home/coder/adventure-game"
-
-RUN git init
-RUN git remote add origin "https://github.com/UntoldGam/Text-Based-Adventure-Game.git"
-RUN git remote -v
-RUN git pull origin main
 
 # Port
 ENV PORT=8080
