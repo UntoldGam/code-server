@@ -49,5 +49,5 @@ RUN git config --global user.email charlesobird+github@outlook.com
 ENV PORT=8080
 
 # Use our custom entrypoint script first
-COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
-ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
+COPY deploy-vm/launch-code-server.sh /usr/bin/launch-code-server.sh
+ENTRYPOINT ["/usr/bin/launch-code-server.sh"]
