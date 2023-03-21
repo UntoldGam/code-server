@@ -2,9 +2,10 @@
 
 START_DIR="${START_DIR:-/home/coder/adventure-game}"
 
-PREFIX="SYS"
+PREFIX="Code Server"
 GIT_REPO="https://github.com/UntoldGam/Text-Based-Adventure-Game.git"
 mkdir -p $START_DIR
+
 
 # function to clone the git repo or add a user's first file if no repo was specified.
 #project_init () {
@@ -35,4 +36,4 @@ fi
 
 echo "[$PREFIX] Starting code-server..."
 # Now we can run code-server with the default entrypoint
-/usr/bin/entrypoint.sh --bind-addr 0.0.0.0:8080 $START_DIR
+/usr/bin/entrypoint.sh --bind-addr 0.0.0.0:8080 #$START_DIR
