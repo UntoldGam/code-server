@@ -38,7 +38,7 @@ RUN sudo apt install -y python3-pip
 RUN sudo code-server --global --install-extension esbenp.prettier-vscode
 RUN sudo code-server --global --install-extension ms-python.python
 RUN sudo code-server --global --install-extension knisterpeter.vscode-github
-RUN sudo code-server --global --install-extension dbaeumer.vscode-eslint
+RUN sudo code-server --global --install-extension ms-python.pylint
 
 # login to git + change dir
 
