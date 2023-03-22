@@ -35,5 +35,7 @@ if [ -n "$DOTFILES_REPO" ]; then
 fi
 
 echo "[$PREFIX] Starting code-server..."
+echo "[$PREFIX] Listing Files and Directories"
+ls
 # Now we can run code-server with the default entrypoint
 /usr/bin/entrypoint.sh --bind-addr 0.0.0.0:8080 $START_DIR
