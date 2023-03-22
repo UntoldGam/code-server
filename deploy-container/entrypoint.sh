@@ -34,8 +34,10 @@ if [ -n "$DOTFILES_REPO" ]; then
     [ -f "$HOME/dotfiles/install.sh" ] && $HOME/dotfiles/install.sh
 fi
 
-echo "[$PREFIX] Starting code-server..."
-echo "[$PREFIX] Listing Files and Directories"
+echo "[$PREFIX] Start of Directory and Files listing"
 ls
+echo "[$PREFIX] End of Directory and Files listing"
+
+echo "[$PREFIX] Starting code-server with the default entrypoint"
 # Now we can run code-server with the default entrypoint
 /usr/bin/entrypoint.sh --bind-addr 0.0.0.0:8080 $START_DIR
